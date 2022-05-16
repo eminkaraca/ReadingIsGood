@@ -10,6 +10,7 @@ import com.readingisgood.Service.Model.Response.Book.PersistBookResponse;
 import com.readingisgood.Service.Model.Response.Book.UpdateStockResponse;
 import com.readingisgood.Service.Service.Interface.IBookService;
 import lombok.RequiredArgsConstructor;
+import org.javers.spring.annotation.JaversAuditable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -29,6 +30,7 @@ public class BookService implements IBookService {
      * @return {@link PersistBookResponse} created book informations
      * @throws RigException {@Link RigException}
      */
+    @JaversAuditable
     @Override
     public PersistBookResponse persist(PersistBookRequest bookInfo) throws RigException {
         logger.info("adding new book [{}]",bookInfo);
@@ -51,6 +53,7 @@ public class BookService implements IBookService {
      * @param stockCount new stok count
      * @return {@link UpdateStockResponse} updated book informations
      */
+    @JaversAuditable
     @Override
     public UpdateStockResponse updateBookStock(String bookId, Integer stockCount) {
         logger.info(String.format("updateBookStock bookId, stock coun [%s,%s]",bookId,stockCount.toString()));
@@ -93,6 +96,7 @@ public class BookService implements IBookService {
      * Saves a book
      * @param book book to save {@link Book}
      */
+    @JaversAuditable
     @Override
     public void save(Book book) {
         bookRepository.save(book);

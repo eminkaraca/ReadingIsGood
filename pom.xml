@@ -6,12 +6,12 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.6.7</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>com.readingisgood</groupId>
-	<artifactId>ReadinIsGood</artifactId>
+	<artifactId>ReadingIsGood</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CustomerService</name>
+	<name>ReadingIdGoodApi</name>
 	<description>Demo project for Getir</description>
 	<properties>
 		<java.version>11</java.version>
@@ -127,7 +127,7 @@
 		<dependency>
 			<groupId>org.javers</groupId>
 			<artifactId>javers-spring-boot-starter-mongo</artifactId>
-			<version>5.3.4</version>
+			<version>6.6.5</version>
 		</dependency>
 	</dependencies>
 

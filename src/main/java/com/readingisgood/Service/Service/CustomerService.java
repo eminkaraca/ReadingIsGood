@@ -12,6 +12,7 @@ import com.readingisgood.Service.Security.Service.JWTService;
 import com.readingisgood.Service.Service.Interface.ICustomerService;
 import com.readingisgood.Service.Service.Interface.IOrderService;
 import lombok.RequiredArgsConstructor;
+import org.javers.spring.annotation.JaversAuditable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -36,6 +37,8 @@ public class CustomerService implements ICustomerService {
      * @param customerInfo customer information {@link PersistCustomerRequest}
      * @return newly persisted Customer as {@link PersistCustomerResponse}
      */
+    @JaversAuditable
+    @Override
     public PersistCustomerResponse persist(PersistCustomerRequest customerInfo) throws RigCustomeException {
 
         // Check if user already persisted

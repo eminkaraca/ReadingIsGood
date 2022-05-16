@@ -129,17 +129,14 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.2" level="project" />
     <orderEntry type="library" name="Maven: javax.validation:validation-api:2.0.1.Final" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
-    <orderEntry type="library" name="Maven: org.javers:javers-spring-boot-starter-mongo:5.3.4" level="project" />
-    <orderEntry type="library" name="Maven: org.javers:javers-core:5.3.4" level="project" />
-    <orderEntry type="library" name="Maven: org.picocontainer:picocontainer:2.15" level="project" />
-    <orderEntry type="library" name="Maven: io.github.classgraph:classgraph:4.4.12" level="project" />
-    <orderEntry type="library" name="Maven: joda-time:joda-time:2.9.7" level="project" />
-    <orderEntry type="library" name="Maven: org.javers:javers-spring:5.3.4" level="project" />
-    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.7" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:1.0.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.javers:javers-spring-mongo:5.3.4" level="project" />
-    <orderEntry type="library" name="Maven: org.javers:javers-persistence-mongo:5.3.4" level="project" />
-    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver:3.8.2" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-configuration-processor:2.6.7" level="project" />
+    <orderEntry type="library" name="Maven: org.javers:javers-spring-boot-starter-mongo:6.6.5" level="project" />
+    <orderEntry type="library" name="Maven: org.javers:javers-spring-mongo:6.6.5" level="project" />
+    <orderEntry type="library" name="Maven: org.javers:javers-spring:6.6.5" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.aspectj:aspectjweaver:1.9.7" level="project" />
+    <orderEntry type="library" name="Maven: org.javers:javers-persistence-mongo:6.6.5" level="project" />
+    <orderEntry type="library" name="Maven: org.javers:javers-core:6.6.5" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.picocontainer:picocontainer:2.15" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.github.classgraph:classgraph:4.8.128" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.mongodb:mongodb-driver-legacy:4.4.2" level="project" />
   </component>
 </module>
