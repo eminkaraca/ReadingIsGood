@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "5f5bd1f1-c785-4c26-952f-e0fbc30f1d70",
+		"name": "ReadingIsGood",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CustomerPersist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"emin.karaca@gmail.com\",\r\n  \"password\": \"1212\",\r\n  \"name\": \"Emin\",\r\n  \"surname\": \"KARACA\",\r\n  \"openAddress\": \"Aydınlar mah. hürriyet caddesi Dikmen Çankaya/Ankara\",\r\n  \"phone\": \"5334340000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/customers/persist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"persist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"emin.karaca@gmail.com\",\r\n  \"password\": \"1212\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/customers/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerOrdersGet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTI2OTE2MjUsImV4cCI6MTY1Mjc1MTYyNSwic3ViIjoiZW1pbi5rYXJhY2FAZ21haWwuY29tIn0.Z_InV5LWDN9IBkMAtw15-SW736mQ5kmR7CO5yxlqsYU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/customers/orders/62801264e4d843235b6b2690?page=0&size=25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"orders",
+						"62801264e4d843235b6b2690"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookPersist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTI2NDg4MjgsImV4cCI6MTY1MjcwODgyOCwic3ViIjoiZW1pbi5rYXJhY2FAZ21haWwuY29tIn0.4YEh-lelXi2NYcwZ6ib-neOB9ZqWcw_HH1NdaziVjeQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Bir delinin Günlüğü\",\r\n  \"price\": 45.99,\r\n  \"stock\": 77\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/book/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"book",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookUpdateStock",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTI2OTE2MjUsImV4cCI6MTY1Mjc1MTYyNSwic3ViIjoiZW1pbi5rYXJhY2FAZ21haWwuY29tIn0.Z_InV5LWDN9IBkMAtw15-SW736mQ5kmR7CO5yxlqsYU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:80801/api/book/update/62816bb197f9f24bef050aa1?stockCount=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80801",
+					"path": [
+						"api",
+						"book",
+						"update",
+						"62816bb197f9f24bef050aa1"
+					],
+					"query": [
+						{
+							"key": "stockCount",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OrderPersist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTI2NDg4MjgsImV4cCI6MTY1MjcwODgyOCwic3ViIjoiZW1pbi5rYXJhY2FAZ21haWwuY29tIn0.4YEh-lelXi2NYcwZ6ib-neOB9ZqWcw_HH1NdaziVjeQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": \"62801264e4d843235b6b2690\",\r\n  \"orders\": \r\n   [\r\n    {\"bookId\": \"62816b9497f9f24bef050aa0\", \"count\":2},\r\n    {\"bookId\": \"62816bb197f9f24bef050aa1\", \"count\":1}\r\n   ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/orders/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"orders",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OrderQuery",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTI2NDg4MjgsImV4cCI6MTY1MjcwODgyOCwic3ViIjoiZW1pbi5rYXJhY2FAZ21haWwuY29tIn0.4YEh-lelXi2NYcwZ6ib-neOB9ZqWcw_HH1NdaziVjeQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/orders/62816efb97f9f24bef050aa2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"orders",
+						"62816efb97f9f24bef050aa2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OrderQueryByDate",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTI2NDg4MjgsImV4cCI6MTY1MjcwODgyOCwic3ViIjoiZW1pbi5rYXJhY2FAZ21haWwuY29tIn0.4YEh-lelXi2NYcwZ6ib-neOB9ZqWcw_HH1NdaziVjeQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/orders?startDate=20220515&endDate=20220519",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "20220515"
+						},
+						{
+							"key": "endDate",
+							"value": "20220519"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Statistics_CustomerMontlyOrder",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTI2NDg4MjgsImV4cCI6MTY1MjcwODgyOCwic3ViIjoiZW1pbi5rYXJhY2FAZ21haWwuY29tIn0.4YEh-lelXi2NYcwZ6ib-neOB9ZqWcw_HH1NdaziVjeQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/statistics/62801264e4d843235b6b2690",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"statistics",
+						"62801264e4d843235b6b2690"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
